@@ -5561,6 +5561,10 @@ static void Task_LoadSearchMenu(u8 taskId)
             if (!IsNationalPokedexEnabled())
                 CopyToBgTilemapBuffer(3, gPokedexScreenSearchHoenn_Tilemap, 0, 0);
             else
+<<<<<<< HEAD
+                CopyToBgTilemapBuffer(3, gPokedexSearchMenuNational_Tilemap, 0, 0);
+            LoadPalette(gPokedexSearchMenu_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
+=======
                 CopyToBgTilemapBuffer(3, gPokedexScreenSearchNational_Tilemap, 0, 0);
             if (!HGSS_DARK_MODE)
                 LoadPalette(gPokedexMenuSearch_Pal + 1, 1, 0x7E);
