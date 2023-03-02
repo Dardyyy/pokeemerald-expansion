@@ -464,8 +464,7 @@ static void DestroySplitIcon(void); //Physical/Special Split from BE
 //Physical/Special Split from BE
 #define TAG_SPLIT_ICONS 30004
 
-static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons.gbapal");
-static const u32 sSplitIcons_Gfx[] = INCBIN_U32("graphics/interface/split_icons.4bpp.lz");
+
 
 static const struct OamData sOamData_SplitIcons =
 {
@@ -5556,14 +5555,15 @@ static void Task_LoadSearchMenu(u8 taskId)
             if (!HGSS_DECAPPED)
                 DecompressAndLoadBgGfxUsingHeap(3, gPokedexMenuSearch_Gfx, 0x2000, 0, 0);
             else
-<<<<<<< HEAD
-                CopyToBgTilemapBuffer(3, gPokedexSearchMenuNational_Tilemap, 0, 0);
-            LoadPalette(gPokedexSearchMenu_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
-=======
+<<<<<<<<< Temporary merge branch 1
                 DecompressAndLoadBgGfxUsingHeap(3, gPokedexMenuSearch_DECA_Gfx, 0x2000, 0, 0);
             if (!IsNationalPokedexEnabled())
                 CopyToBgTilemapBuffer(3, gPokedexScreenSearchHoenn_Tilemap, 0, 0);
             else
+<<<<<<< HEAD
+                CopyToBgTilemapBuffer(3, gPokedexSearchMenuNational_Tilemap, 0, 0);
+            LoadPalette(gPokedexSearchMenu_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
+=======
                 CopyToBgTilemapBuffer(3, gPokedexScreenSearchNational_Tilemap, 0, 0);
             if (!HGSS_DARK_MODE)
                 LoadPalette(gPokedexMenuSearch_Pal + 1, 1, 0x7E);
